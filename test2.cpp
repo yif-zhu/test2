@@ -9,6 +9,7 @@
 #include <QFont>
 #include <qdir.h>
 #include <QDebug>
+#include <qtranslator.h>
 
 
 test2::test2(QWidget *parent)
@@ -17,6 +18,7 @@ test2::test2(QWidget *parent)
 	ui.setupUi(this);
 	flags = false;
 	color = new ColorChanged();
+	m_Translater = new QTranslator(this);
 
 	QFont font;
 	font.setPointSize(12);
@@ -130,18 +132,19 @@ void test2::on_actionColor(bool f)//颜色按钮
 
 void test2::on_actionEnglish(bool f)
 {
-	QMessageBox::information(this, "information", " 没 有 实 现 ");
-	/*m_Translater->load("");
+	//QMessageBox::information(this, "information", " 没 有 实 现 ");
+	//qDebug() << QDir::currentPath();
+	m_Translater->load("test2_en.qm");
 	qApp->installTranslator(m_Translater);
-	ui.retranslateUi(this);*/
+	ui.retranslateUi(this);
 }
 
-void test2::on_actionChinese(bool f)
+void test2::on_actionChinese(bool f)	
 {
-	QMessageBox::information(this, "information", " 没 有 实 现 ");
-	/*m_Translater->load("");
+	//QMessageBox::information(this, "information", " 没 有 实 现 ");
+	m_Translater->load("test2_zh.qm");
 	qApp->installTranslator(m_Translater);
-	ui.retranslateUi(this);*/
+	ui.retranslateUi(this);
 }
 
  
