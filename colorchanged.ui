@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ColorChanged</class>
+ <widget class="QDialog" name="ColorChanged">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ColorChanged</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>你喜欢的颜色：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>80</y>
+     <width>69</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>暗橙色</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>白色靓丽</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>黑色炫酷</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>170</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>170</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ColorChanged</receiver>
+   <slot>on_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>ColorChanged</receiver>
+   <slot>on_pushButton_2_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(int)</signal>
+   <receiver>ColorChanged</receiver>
+   <slot>on_comboBox_activated(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_pushButton_clicked()</slot>
+  <slot>on_pushButton_2_clicked()</slot>
+  <slot>on_comboBox_activated(int)</slot>
+ </slots>
+</ui>
